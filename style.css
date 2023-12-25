@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: brown;
+}
+.container{
+    position: relative;
+    background: brown;
+    min-height: 500px;
+    border-radius: 20px;
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    box-shadow: 25px 25px 75px rgba(165,42,42,0.75),/*yatay dikey blur(keskinlik) renk*/
+    10px 50px 70px rgba(165,42,42,0.25),
+    inset 5px 5px 10px rgba(165,42,42,0.25),/*ic kismine golge verildi.*/
+    inset 5px 5px 20px rgba(255,203,219,0.25), 
+    inset -5px -5px 15px rgba(165,42,42,0.75);
+}
+.clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background: brown;
+    border-radius: 50%;
+    box-shadow: 10px 50px 70px rgba(165,42,42,0.25),/*yatay dikey blur(keskinlik) renk*/
+    inset 5px 5px 10px rgba(165,42,42,0.25),/*ic kismine golge verildi.*/
+    inset 5px 5px 20px rgba(255,203,219,0.25), 
+    inset -5px -5px 15px rgba(165,42,42,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: brown;
+    border: 3px solid wheat;
+}
+.clock span{
+    position: absolute;
+    inset: 20px;
+    color: wheat;
+    text-align: center;
+    /*360/12=30deg*/
+    transform: rotate(calc(30deg*var(--i)));
+}
+.clock span b{
+    font-size: 2em;
+}
