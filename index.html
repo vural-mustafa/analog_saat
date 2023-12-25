@@ -12,6 +12,9 @@
     <body style="width: 100%;">
         <div class="container">
             <div class="clock">
+                <div class="circle" id="sc" style="--clr:#66FF00"><i></i></div>
+                <div class="circle circle2" id="mn" style="--clr:#FFFF00"><i></i></div>
+                <div class="circle circle3" id="hr" style="--clr:#FF1493"><i></i></div>
                 <span style="--i:1"><b>1</b></span>
                 <span style="--i:2"><b>2</b></span>
                 <span style="--i:3"><b>3</b></span>
@@ -25,6 +28,14 @@
                 <span style="--i:11"><b>11</b></span>
                 <span style="--i:12"><b>12</b></span>
             </div>
+            <!--Digital Clock-->
+            <div id="time">
+                <div id="hours" style="--clr:#FF1493">00</div>
+                <div id="minutes" style="--clr:#FFFF00">00</div>
+                <div id="seconds" style="--clr:#66FF00">00</div>
+                <div id="ampm">AM</div>
+            </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
